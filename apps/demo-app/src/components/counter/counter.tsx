@@ -1,9 +1,5 @@
 import { useState } from 'react';
-
-const btnStyle = {
-  height: '32px',
-  width: '32px',
-};
+import Button from '../button/button';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -16,14 +12,9 @@ const Counter = () => {
         gap: '1rem',
       }}
     >
-      <button onClick={() => setCount(count - 1)} style={btnStyle}>
-        -{' '}
-      </button>
+      <Button onClick={() => setCount(count - 1)} label="-" />
       <p>{count}</p>
-      <button onClick={() => setCount(count + 1)} style={btnStyle}>
-        {' '}
-        +{' '}
-      </button>
+      <Button onClick={() => setCount(count + 1)} label="+" />
     </div>
   );
 };
