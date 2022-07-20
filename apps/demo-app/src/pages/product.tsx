@@ -16,7 +16,11 @@ const Product = () => {
   return (
     <div>
       <h1>{product.title}</h1>
-      <h3>{formatCurrency(product.price, 'code')}</h3>
+      <h3>
+        {formatCurrency(product.price, {
+          currencyDisplay: 'code',
+        })}
+      </h3>
       <img src={product.image} alt="product" />
     </div>
   );

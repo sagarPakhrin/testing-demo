@@ -3,7 +3,7 @@ const Product = ({ product }) => {
   return (
     <div>
       <h1>{product.title}</h1>
-      <h3>{formatCurrency(product.price)}</h3>
+      <h3>{formatCurrency(product.price, 'symbol')}</h3>
     </div>
   );
 };
